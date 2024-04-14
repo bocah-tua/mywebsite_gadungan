@@ -1,0 +1,93 @@
+.li-nav{
+    margin-top: 10px;
+    margin-right: 30px;
+    display: block;
+    padding:5px;
+}
+.li-submenu{
+    list-style-type:none;
+}
+.li-submenu a{
+    text-decoration: none;
+    color:black;
+}
+.submenu{
+    display:none;
+}
+.li-nav:hover{
+    background-color: orange;
+    border-radius: 3px;
+}
+.li-nav:hover .submenu{
+    display:block;
+    position: absolute;
+    transition: 0.5s;
+    margin-top: 20px;
+    background-color: orange;
+    border-radius: 3px;
+}
+.navbar{
+    display:flex;
+    align-items: center;
+}
+.navbar-brand{
+    padding:20px 20px 20px 0px;
+    font-weight: bold;
+    margin-top: 5px;
+}
+@media (max-width: 768px){
+    .li-nav:hover .submenu{
+        position: relative;
+    }
+    .konten{
+        display: grid;
+        grid-template-columns: repeat(auto, minmax(768px,1fr));
+        background-color: aliceblue;
+        gap:10px;
+    }
+    .konten1 , .konten2 , .konten3 {
+        grid-area: auto;
+        background-color:rgba(75, 63, 202, 0.412);
+    }
+}
+* body{
+    padding:20px;
+    background-color: grey;
+    background:linear-gradient(to left top, rgb(37, 73, 253), rgb(255, 23, 189));
+    background-repeat: no-repeat;
+
+}
+
+
+/* konten */
+@media (min-width: 768px){
+    .konten{
+        margin-top: 20px;
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "konten1 konten2"
+        "konten1 konten3";
+        gap:10px;
+        background-color: aliceblue;
+    }
+    .konten1{
+        grid-area: konten1;
+        background-color:rgba(75, 63, 202, 0.412);
+    }
+    .konten2{
+        grid-area: konten2;
+        background-color:rgba(75, 63, 202, 0.412);
+        height:300px;
+    }
+    .konten3{
+        grid-area: konten3;
+        background-color:rgba(75, 63, 202, 0.412);
+        height:300px;
+    }
+}
+
+.dll{
+    margin-top: 20px;
+    text-align:center ;
+    background-color: aliceblue;
+}
